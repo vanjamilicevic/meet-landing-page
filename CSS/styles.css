@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*
+
+  ----------------------------------------------------- Header section ------------------------------------------------------------
+
+  Header has following grid layout:
+  1. One line for logo
+  2. Another line for left and right set of images as well as content in the middle
+*/
+.header-container {
+
+  display: grid;
+  grid-template-areas:
+    "logo logo logo"
+    "images-left content images-right";
+}
+
+.header-logo {
+
+  grid-area: logo;
+  margin: 8vh auto 12vh auto;
+}
+
+/* 
+  Left header images have 2x3 grid layout where middle images are
+  slightly moved upwards
+*/
+.header-images-left {
+
+  grid-area: images-left;
+
+  /* Creating grid for left set of images */
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+
+  /* Moving images slightly to the left */
+  position: relative;
+  right: 2vw;
+}
+
+/* Styling images withinn header section */
+.header-images-left img {
+
+  width: 7vw;
+  height: 7vw;
+  border-radius: 100%;
+  margin-right: -2vw;
+}
+
+/* Moving second/fifth image upwards */
+.second-image {
+
+  position: relative;
+  bottom: 5vh;
+}
+
+.fifth-image {
+
+  position: relative;
+  bottom: 5vh;
+}
+
+/*
+  Header content consists out of: 
+  1. Title
+  2. Text
+  3. Download button
+  4. What is it button
+*/
+.header-content {
+
+  grid-area: content;
+  
+  text-align: center;
+  margin: auto;
+}
+
+.header-title {
+
+  font-weight: 900;
+  font-size: 64px;
+}
+
+.header-text {
+
+  margin: 4vh auto 3vh auto;
+  
+  font-size: 18px;
+  color: #87879D;
+  line-height: 24px;
+}
+
+.header-download-button {
+	
+  background-color:#4D96A9;
+	border-radius: 28px;
+	border: none;
+	
+  display: inline-block;
+	cursor: pointer;
+	color: white;
+	
+  font-size: 15px;
+  font-weight: 600;
+	
+  padding: 16px 31px;
+	text-decoration: none;
+
+  margin-right: 1vw;
+}
+
+.header-download-button:hover {
+	
+  background-color: #71C0D4;
+  border: none;
+}
+
+.header-download-button span {
+
+  color: #8FE3F9;
+}
+
+.header-what-button {
+	
+  background-color:#855FB1;
+	border-radius: 28px;
+	border: none;
+	
+  display: inline-block;
+	cursor: pointer;
+	color: white;
+	
+  font-size:15px;
+  font-weight: 600;
+	
+  padding:16px 31px;
+	text-decoration:none;
+}
+
+.header-what-button:hover {
+	
+  background-color: #B18BDD;
+  border: none;
+}
+
+/* 
+  Right images have 2x3 grid layout where middle images are
+  slightly moved downwards
+*/
+.header-images-right {
+
+  grid-area: images-right;
+
+  /* Creating grid for left set of images */
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+
+  /* Moving images slightly to the right */
+  position: relative;
+  left: 6vw;
+}
+
+.header-images-right img {
+  
+  width: 7vw;
+  height: 7vw;
+  border-radius: 100%;
+
+  margin-left: -2vw;
+}
+
+/* Moving images in the center slightly downwards */
+.eight-image {
+
+  position: relative;
+  top: 5vh;
+}
+
+.eleventh-image {
+
+  position: relative;
+  top: 5vh;
+}
+
+
+/*
+
+  ---------------------------------------------------------- Main section ------------------------------------------------------------
+
+  Main section has the following:
+  1. Div that represents a line 
+  2. Div that is a circle
+  3. 4 images
+  4. Two headings
+  5. Paragraph
+
+*/
+
+.main-section {
+
+  margin-top: 15vh;
+
+  /* Aligning both images and the text */
+  text-align: center;
+}
+
+/* 
+  Line is basically a div with certain width, height and light grey color
+*/
+.line {
+
+  background-color: #87879D;
+  opacity: 0.25;
+  height: 7vh;
+  width: 1px;
+
+  margin: auto;
+}
+
+.circle {
+
+  /* Setting transparent border and radius */
+  border: 1px solid rgba(135, 135, 157, 0.25); 
+  border-radius: 100%;
+
+  /* Setting text size */
+  font-weight: 600;
+  text-align: center;
+  width: 1vw;
+  height: 1vw;
+
+  /* Giving padding/margins */
+  padding: 0.7vw;
+  margin: auto; 
+  margin-bottom: 5vh;
+}
+
+.circle span {
+
+  font-size: 14px;
+  font-weight: 900;
+  color: #87879D;
+}
+
+.main-section img {
+
+  width: 15vw;
+  height: 13vw;
+
+  border-radius: 5px;
+  margin-left: 1.5vw;
+}
+
+.main-section h3 {
+
+  margin-top: 7vh;
+  margin-bottom: 3vh;
+
+  color: #4D96A9;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.main-section h2 {
+
+  width: 23%;
+  margin: auto;
+  margin-bottom: 3vh;
+
+  font-weight: 900;
+  font-size: 36px;
+}
+
+.main-section p {
+
+  /* Centering paragraph */
+  display: block;
+  width: 28%;
+  margin: auto;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #87879D;
+  
+  margin-bottom: 3vh;
+}
+
+/*
+
+  -------------------------------------------------------------- Footer ---------------------------------------------------------------
+
+  Footer has the following:
+  1. Div that represents a line 
+  2. Div that is a circle
+  3. Two paragraphs
+  4. Button
+*/
+
+.footer-container {
+
+  /* Setting section font */
+  color: white;
+  
+  /* Setting fotter background */
+  background-image: 
+    linear-gradient(
+      rgba(77, 150, 169, 0.9), 
+      rgba(77, 150, 169, 0.9)
+    ),
+    url("../assets/desktop/image-footer.jpg");
+  background-size: 100%;
+}
+
+.footer-container .line {
+
+  position: relative;
+  bottom: 9.5vh;
+  margin-top: 15vh;
+}
+
+.footer-container .circle {
+
+  position: relative;
+  bottom: 9.5vh;
+  background-color: white;
+}
+
+/* 
+  - Re-using button created for the header part of the page
+  - Changing color
+*/
+.footer-container .header-download-button {
+
+  background-color: #855FB1;
+}
+
+.footer-container .header-download-button:hover {
+
+  background-color: #D9B8FF;
+}
+
+/*
+  Footer content has:
+  - Header
+  - Paragraph with explanation and
+  - Button (reused)
+*/
+.footer-content {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-content h2 {
+
+  width: 50%;
+  margin: auto;
+  margin-bottom: 12vh;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.footer-content p {
+
+  width: 55%;
+  margin: auto;
+  margin-bottom: 12vh;
+}
+
+.footer-content button {
+
+  width: 40%;
+  margin: auto;
+  margin-bottom: 12vh;
+}
