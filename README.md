@@ -24,7 +24,7 @@ Users should be able to:
 
 Desktop version: 
 
-![Desktop version](./assets/screenshots/desktop.png)
+![Desktop version](./assets/screenshots/Desktop.png)
 
 Tablet version:
 
