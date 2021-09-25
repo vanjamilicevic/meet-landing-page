@@ -5,7 +5,7 @@
 */
 .page-container {
 
-  width: 90%;
+  max-width: 90%;
   margin: auto;
   overflow-x: hidden;
 }
